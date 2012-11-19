@@ -1,19 +1,19 @@
 /*
-  Analog input, serial output
+  ArduinoBatteryMonitor
+  Based on Arduino example AnalogInOutSerial by Tom Igoe
  
   This example code is in the public domain.
- 
  */
 
 #include <stdlib.h>
 
-// These constants won't change.  They're used to give names
-// to the pins used:
-const int analogInPin  = A0;   // Analog input pin that the potentiometer is attached to
-const int pause        = 1000;    // delay between samples (ms)
+// Constants
+const int analogInPin  = A0;      // Analog pin the voltage divider is attached to
 const float Vcc        = 5;       // µC Vcc (V)
 const float R1         = 27000;   // Voltage divider R1 (Ohm)
 const float R2         = 10000;   // Voltage divider R2 (Ohm)
+
+const int pause        = 60*1000;    // delay between samples (ms)
 
 
 void setup() {
@@ -38,7 +38,5 @@ void loop() {
   Serial.println(buffer);
 
   // wait before the next loop
-  // for the analog-to-digital converter to settle
-  // after the last reading:
   delay(pause);                     
 }
