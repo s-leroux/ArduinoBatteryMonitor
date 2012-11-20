@@ -1,5 +1,7 @@
 /*
   ArduinoBatteryMonitor
+  by Sylvain Leroux <sylvain@chicoree.fr>
+
   Based on Arduino example AnalogInOutSerial by Tom Igoe
  
   This example code is in the public domain.
